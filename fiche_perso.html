@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fiche de personnage pour le JDR Eldoria">
+    <title>Fiche de Personnage - Eldoria</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;600&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Fiche de Personnage - Eldoria</h1>
+    <form id="characterForm">
+        <section id="identity">
+            <h2>Identité</h2>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name">
+            <label for="photo">Photo :</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+            <img id="photoPreview" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" 
+                 alt="Photo du personnage" 
+                 style="display:none;" 
+                 width="200" 
+                 height="200">
+        </section>
+
+        <section id="race">
+            <h2>Race</h2>
+            <label for="raceSelect">Sélectionnez une race :</label>
+            <select id="raceSelect" name="race">
+                <option value="">Sélectionnez une race</option>
+                <option value="Humains">Humains</option>
+                <option value="Elfes">Elfes</option>
+                <option value="Nains des Profondeurs">Nains des Profondeurs</option>
+                <option value="Khorlaks">Khorlaks</option>
+                <option value="Draïdiens">Draïdiens</option>
+                <option value="Draegars">Draegars</option>
+                <option value="Ykharas">Ykharas</option>
+                <option value="Séraphins">Séraphins</option>
+                <option value="Skarjaks">Skarjaks</option>
+                <option value="Férymants">Férymants</option>
+            </select>
+        </section>
+
+        <section id="faction">
+            <h2>Faction</h2>
+            <label for="factionSelect">Sélectionnez une faction ou "Neutre" :</label>
+            <select id="factionSelect" name="faction">
+                <option value="">Sélectionnez une faction ou "Neutre"</option>
+                <option value="Gardiens de la Lumière">Gardiens de la Lumière</option>
+                <option value="Sombres Frères">Sombres Frères</option>
+                <option value="Élus de l'Obscurité">Élus de l'Obscurité</option>
+                <option value="Légion des Survivants">Légion des Survivants</option>
+                <option value="Explorateurs des Profondeurs">Explorateurs des Profondeurs</option>
+                <option value="Éveillés du Vide">Éveillés du Vide</option>
+                <option value="Coalition des Peuples Libérés">Coalition des Peuples Libérés</option>
+                <option value="Chasseurs du Néant">Chasseurs du Néant</option>
+                <option value="Veilleurs de l'Ancienne Garde">Veilleurs de l'Ancienne Garde</option>
+                <option value="Nomades des Cendres">Nomades des Cendres</option>
+                <option value="Neutre">Neutre</option>
+            </select>
+        </section>
+
+        <section id="class">
+            <h2>Classe / Rôle</h2>
+            <label for="classInput">Classe / Rôle :</label>
+            <input type="text" id="classInput" name="class">
+        </section>
+
+        <!-- 2. REMPLACER la section des statistiques dans le HTML par ceci : -->
+<section id="statistics" aria-label="Statistiques du personnage">
+    <h2>Statistiques</h2>
+    <div class="points-counter" id="pointsCounter">
+        Points utilisés : <span id="usedPoints">0</span> / 75
+    </div>
+    <p>Vous avez 75 points à répartir, maximum 20 par statistique (bonus raciaux inclus).</p>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Statistique</th>
+                <th scope="col">Valeur</th>
+                <th scope="col">Bonus/Malus racial</th>
+                <th scope="col">Total</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Force (For)</td>
+                <td>
+                    <label for="statForce" class="visually-hidden">Force</label>
+                    <input type="number" id="statForce" name="statForce" min="0" value="0" autocomplete="off" required>
+                </td>
+                <td><span id="bonus_for" aria-label="Bonus racial de force"></span></td>
+                <td><span id="total_for" class="stat-total">0</span></td>
+                <td>Puissance physique, dégâts au corps à corps</td>
+            </tr>
+            <tr>
+                <td>Résistance (Res)</td>
+                <td>
+                    <label for="statResistance" class="visually-hidden">Résistance</label>
+                    <input type="number" id="statResistance" name="statResistance" min="0" value="0" autocomplete="off" required>
+                </td>
+                <td><span id="bonus_res" aria-label="Bonus racial de résistance"></span></td>
+                <td><span id="total_res" class="stat-total">0</span></td>
+                <td>Endurance, capacité à encaisser les coups</td>
+            </tr>
+            <tr>
+                <td>Dextérité (Dex)</td>
+                <td>
+                    <label for="statDexterite" class="visually-hidden">Dextérité</label>
+                    <input type="number" id="statDexterite" name="statDexterite" min="0" value="0" autocomplete="off" required>
+                </td>
+                <td><span id="bonus_dex" aria-label="Bonus racial de dextérité"></span></td>
+                <td><span id="total_dex" class="stat-total">0</span></td>
+                <td>Agilité, discrétion, esquive, précision</td>
+            </tr>
+            <tr>
+                <td>Intelligence (Int)</td>
+                <td>
+                    <label for="statIntelligence" class="visually-hidden">Intelligence</label>
+                    <input type="number" id="statIntelligence" name="statIntelligence" min="0" value="0" autocomplete="off" required>
+                </td>
+                <td><span id="bonus_int" aria-label="Bonus racial d'intelligence"></span></td>
+                <td><span id="total_int" class="stat-total">0</span></td>
+                <td>Logique, connaissances, résolution d'énigmes</td>
+            </tr>
+            <tr>
+                <td>Magie (Mag)</td>
+                <td>
+                    <label for="statMagie" class="visually-hidden">Magie</label>
+                    <input type="number" id="statMagie" name="statMagie" min="0" value="0" autocomplete="off" required>
+                </td>
+                <td><span id="bonus_mag" aria-label="Bonus racial de magie"></span></td>
+                <td><span id="total_mag" class="stat-total">0</span></td>
+                <td>Aptitude aux sorts et énergies magiques</td>
+            </tr>
+            <tr>
+                <td>Charisme (Char)</td>
+                <td>
+                    <label for="statCharisme" class="visually-hidden">Charisme</label>
+                    <input type="number" id="statCharisme" name="statCharisme" min="0" value="0" autocomplete="off" required>
+                </td>
+                <td><span id="bonus_char" aria-label="Bonus racial de charisme"></span></td>
+                <td><span id="total_char" class="stat-total">0</span></td>
+                <td>Influence sociale, persuasion</td>
+            </tr>
+            <tr>
+                <td>Mentale (Ment)</td>
+                <td>
+                    <label for="statMentale" class="visually-hidden">Mentale</label>
+                    <input type="number" id="statMentale" name="statMentale" min="0" value="0" autocomplete="off" required>
+                </td>
+                <td><span id="bonus_ment" aria-label="Bonus racial de résistance mentale"></span></td>
+                <td><span id="total_ment" class="stat-total">0</span></td>
+                <td>Volonté, résistance mentale (peur, fatigue)</td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="statsRadar">
+        <h3 style="color: #ffcc00; font-family: 'Cinzel', serif; margin-bottom: 15px;">Radar des Statistiques</h3>
+        <canvas id="radarCanvas" width="475" height="440" style="margin-left:auto;margin-right:auto;display:block;"></canvas>
+    </div>
+</section>
+
+<section id="points" aria-label="Points de vie et de mana">
+    <h2>Points de vie et de mana</h2>
+    <p>(à définir par jet de dés)</p>
+    <label for="pv">Points de vie (PV) :</label>
+    <input type="text" id="pv" name="pv">
+    <label for="pm">Points de mana (PM) :</label>
+    <input type="text" id="pm" name="pm">
+</section>
+
+<section id="equipment">
+    <h2>Équipement &amp; armes</h2>
+    <label for="weapon">Arme principale :</label>
+    <input type="text" id="weapon" name="weapon" placeholder="Exemple : Épée longue, arc composite, bâton runique">
+    <label for="notableEquipment">Équipement notable / objets spéciaux :</label>
+    <textarea id="notableEquipment" name="notableEquipment" placeholder="Exemple : Anneau de vision nocturne, cape de discrétion, épée héritée"></textarea>
+</section>
+
+<section id="abilities">
+    <h2>Capacités &amp; talents</h2>
+    <label for="abilitiesText">Capacités spéciales acquises :</label>
+    <textarea id="abilitiesText" name="abilities" placeholder="Exemples : Tir à l'arc précis, Sort de soin mineur, Esquive agile, Enchantement d'arme"></textarea>
+</section>
+
+<section id="background">
+    <h2>Historique &amp; personnalité</h2>
+    <label for="origins">Origines :</label>
+    <textarea id="origins" name="origins" placeholder="Exemple : Né dans un village reculé, élevé par des druides après le cataclysme."></textarea>
+    <label for="motivations">Motivations :</label>
+    <textarea id="motivations" name="motivations" placeholder="Exemple : Retrouver la trace de sa famille disparue, comprendre l'origine des failles."></textarea>
+    <label for="relationships">Relations (alliés, ennemis, faction) :</label>
+    <textarea id="relationships" name="relationships" placeholder="Exemple : Ami d'enfance avec un elfe, rivalité avec un nain, membre d'une guilde secrète."></textarea>
+    <label for="traits">Traits de caractère :</label>
+    <textarea id="traits" name="traits" placeholder="Exemple : Courageux, impulsif, loyal, méfiant envers l'autorité."></textarea>
+</section>
+
+<section id="goals">
+    <h2>Notes &amp; objectifs</h2>
+    <label for="shortTermGoals">Objectifs à court terme :</label>
+    <textarea id="shortTermGoals" name="shortTermGoals" placeholder="Exemple : Trouver un équipement magique, gagner la confiance d'une faction."></textarea>
+    <label for="longTermGoals">Objectifs à long terme :</label>
+    <textarea id="longTermGoals" name="longTermGoals" placeholder="Exemple : Devenir chef de faction, sceller une faille majeure."></textarea>
+    <label for="events">Événements marquants :</label>
+    <textarea id="events" name="events" placeholder="Exemple : A survécu à l'effondrement de Gathwyn, a vaincu un Khorlak en duel."></textarea>
+</section>
+
+<button type="button" id="exportPngButton">Exporter en PNG</button>
+    </form>
+
+    <div id="exportPngContainer" style="display:none; padding:30px; background:#2a2a2a; color:#e0d8c3; font-family:'Open Sans',sans-serif; max-width:900px;">
+        <div style="display:flex; gap:30px;">
+            <!-- Colonne 1 : Photo + identité/statistiques/équipement -->
+            <div style="flex:1; min-width:0; display: flex; flex-direction: column;">
+                <img id="exportPhoto" src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Photo du personnage" style="width:200px;height:200px;object-fit:cover;display:block;margin-bottom:20px;border-radius:8px;background:#333;">
+                <div id="exportIdentite"></div>
+                <div id="exportStats"></div>
+                <div id="exportEquip"></div>
+            </div>
+            <!-- Colonne 2 : Capacités, historique, objectifs -->
+            <div style="flex:1; min-width:0; display: flex; flex-direction: column;">
+                <div id="exportCapacites"></div>
+                <div id="exportHistoire"></div>
+                <div id="exportObjectifs"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="eldoria_races.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+</html>
