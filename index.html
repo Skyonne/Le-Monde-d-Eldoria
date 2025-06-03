@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Monde d'Eldoria Lore</title>
+    <link href="style.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(to bottom, #1a1a1a, #2b2b2b);
+            color: #e0d8c3;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            line-height: 1.7;
+        }
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+            color: #ffcc00;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        nav {
+            background: #333;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 40px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+        section {
+            margin-bottom: 50px;
+        }
+        .chapter, .faction-card {
+            background: #2a2a2a;
+            padding: 25px;
+            border-left: 4px solid #ffcc00;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        .chapter h2, .faction-card h3 {
+            font-size: 2em;
+            border-bottom: 2px solid #555;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            nav li {
+                display: block;
+                margin: 15px 0;
+            }
+            .chapter, .faction-card {
+                padding: 15px;
+            }
+        }
+        /* Styles pour le tableau des statistiques */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse; /* Fusionne les bordures des cellules */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+            border-radius: 5px;
+            overflow: hidden; /* Pour que le border-radius s'applique aux coins du tableau */
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #ffcc00;
+            color: #1a1a1a; /* Couleur de texte foncée pour contraster avec le fond jaune */
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #2f2f2f; /* Couleur de fond pour les lignes paires */
+        }
+        tr:nth-child(odd) {
+            background-color: #252525; /* Couleur de fond pour les lignes impaires */
+        }
+    </style>
+</head>
+<body>
+    <h1>Le Monde d'Eldoria Lore</h1>
+    <nav>
+        <ul>
+            <li><a href="#chapters">Chapitres</a></li>
+            <li><a href="#factions">Factions</a></li>
+            <li><a href="#races">Races</a></li>
+            <li><a href="#game-mechanics">Mécaniques</a></li>
+        </ul>
+    </nav>
+    
+    <section id="chapters">
+        <h2>Chapitres</h2>
+        <div class="chapter">
+            <h3>Chapitre 1 : L’Origine du Cataclysme</h3>
+            <p>L’histoire d’Eldoria débute en l’an 3 après la fondation de ce nouveau monde, né des cendres d’une catastrophe sans précédent : le “Grand Cataclysme”. Cet événement, dont l’origine reste entourée de mystère, frappa le continent en l’an -50 avant Eldoria (ou 2751 de l’ère Post-Gathwyn). Il s’agissait d’une déflagration magique d’une ampleur inimaginable, déclenchée, selon certains, par l’arrogance des mages de Gathwyn cherchant à manipuler des forces interdites, ou, selon d’autres, par une punition divine visant à purger un monde corrompu. Le sol se déchira, ouvrant des failles abyssales s’étendant sur des centaines de kilomètres, engloutissant villages, cités et royaumes entiers. Les pertes furent colossales, touchant toutes les races – humains, elfes, nains et bien d’autres. L’an 0 d’Eldoria fut marqué par l’effondrement de Gathwyn, la glorieuse capitale du Culte de la Lumière, qui sombra dans le chaos, signalant la fin d’une ère et le début d’une lutte pour la survie.</p>
+        </div>
+        <div class="chapter">
+            <h3>Chapitre 2 : L’Effondrement de Gathwyn</h3>
+            <p>Gathwyn, surnommée l’Empire de la Lumière, était autrefois le joyau du continent. Située sur les rives scintillantes de la mer de Fer, cette cité sacrée était un chef-d’œuvre d’architecture, avec ses murailles imposantes et ses flèches dorées qui perçaient les cieux. Le Culte de la Lumière, à la fois institution religieuse et pouvoir politique, y régnait en maître, imposant une foi absolue à travers ses prêtres et ses chevaliers saints. Mais lorsque le Grand Cataclysme frappa, les fondations de Gathwyn furent éventrées par une faille gigantesque. La ville s’effondra lentement, ses temples majestueux réduits en ruines, tandis qu’une mare de sang – dont nul ne connaît l’origine – se forma au cœur des décombres, baignant les lieux d’une lueur rougeâtre et sinistre. Les survivants parlent d’un crépuscule éternel qui enveloppa la cité, comme si le soleil lui-même refusait de contempler sa chute.</p>
+        </div>
+        <div class="chapter">
+            <h3>Chapitre 3 : Le Monde Après le Cataclysme</h3>
+            <p>Le Grand Cataclysme laissa Eldoria en lambeaux. Les failles déchirèrent le paysage, engloutissant des montagnes, détournant des rivières et noyant des terres sous des océans improvisés. Des créatures cauchemardesques, vomies par les abysses, semèrent la terreur parmi les survivants. L’Empire de la Lumière, jadis un phare d’unité, n’était plus qu’un souvenir, et les royaumes qui s’étaient autrefois prosternés devant Gathwyn sombrèrent dans l’anarchie. Les races d’Eldoria – humains pragmatiques, elfes reclus dans leurs forêts, nains terrés dans leurs forteresses souterraines – durent s’adapter à un monde hostile. Les ressources devinrent rares, les alliances fragiles, et la lutte pour la survie devint le quotidien. Dans ce chaos, certains virent une opportunité de rebâtir, tandis que d’autres succombèrent au désespoir ou à la sauvagerie.</p>
+        </div>
+        <div class="chapter">
+            <h3>Chapitre 4 : La Fracture du Culte de la Lumière</h3>
+            <p>Privé de Gathwyn, le Culte de la Lumière, autrefois un monolithe de foi et de pouvoir, se fissura. Les prêtres et les fidèles, désorientés par la perte de leur cité sainte, divergèrent dans leurs interprétations du Cataclysme. Certains, les Gardiens de la Lumière, jurèrent de restaurer l’ancienne gloire de l’Empire, voyant dans la catastrophe une épreuve divine. D’autres, comme les Sombres Frères, se tournèrent vers les failles, convaincus que des vérités interdites s’y cachaient. Des sectes mineures émergèrent, certaines prônant l’ascétisme, d’autres l’hérésie pure. Les temples abandonnés devinrent des refuges pour ces factions rivales, tandis que les peuples d’Eldoria, divisés par la peur et la méfiance, s’affrontaient pour des miettes de pouvoir ou de survie, transformant un monde jadis uni en un champ de bataille idéologique et physique.</p>
+        </div>
+        <div class="chapter">
+            <h3>Chapitre 5 : Les Failles et les Créatures Abyssales</h3>
+            <p>Les failles, plus que de simples cicatrices sur la terre, étaient des portails vers un royaume insondable. De leurs profondeurs émergèrent des créatures d’une horreur indicible : des bêtes aux membres tordus, des entités spectrales aux yeux luminescents, et des êtres intelligents aux desseins obscurs. Les Khorlaks, par exemple, devinrent une menace omniprésente, mi-humanoïdes mi-monstres, semant la destruction là où ils passaient. Certains érudits avancèrent que ces failles étaient liées à un pouvoir ancien, peut-être une magie oubliée ou une entité cosmique réveillée par le Cataclysme. Les habitants d’Eldoria, terrifiés, les surnommèrent “les bouches du Néant”, et leur présence transforma le monde en un lieu où la peur et la curiosité se mêlaient, poussant certains à explorer ces abysses, et d’autres à les fuir à tout prix.</p>
+        </div>
+        <div class="chapter">
+            <h3>Chapitre 6 : La Quête des Survivants</h3>
+            <p>Dans ce monde brisé, des héros émergèrent des cendres. Ces survivants – aventuriers, mages, guerriers ou simples âmes désespérées – entreprirent des quêtes périlleuses pour comprendre les failles, combattre les créatures abyssales ou retrouver un semblant d’espoir. Certains, comme les Explorateurs des Profondeurs, plongèrent dans les ténèbres pour en percer les secrets, risquant leur vie pour des artefacts ou des connaissances perdues. D’autres, portés par la vengeance ou la rédemption, traquèrent les monstres qui avaient détruit leurs foyers. Leurs récits, souvent tragiques, parlaient de pertes immenses mais aussi de courage face à l’adversité. Ces quêtes, bien que disparates, convergèrent vers un objectif commun : ramener l’ordre dans un monde au bord de l’effondrement total.</p>
+        </div>
+        <div class="chapter">
+            <h3>Chapitre 7 : La Prophétie de l’Héritier de la Lumière</h3>
+            <p>Au milieu du désespoir, une lueur d’espoir naquit sous la forme d’une ancienne prophétie. Gravée dans les archives sacrées de Gathwyn avant sa chute, elle parlait d’un “Héritier de la Lumière”, un être destiné à rallumer la flamme divine et à sceller les failles. Les détails étaient flous – certains disaient qu’il s’agirait d’un descendant des prêtres de l’Empire, d’autres d’un élu surgi du peuple. Les Gardiens de la Lumière y voyaient une promesse de restauration, tandis que des factions comme les Éveillés du Vide doutaient de son authenticité, la considérant comme une fable manipulatrice. Cette prophétie devint un symbole disputé, inspirant des expéditions pour retrouver l’Héritier, mais aussi des conflits entre ceux qui y croyaient et ceux qui la rejetaient.</p>
+        </div>
+        <div class="chapter">
+            <h3>Chapitre 8 : L’Espoir et les Forces Sombres</h3>
+            <p>Alors que certains s’accrochaient à l’espoir de la prophétie ou à la reconstruction, d’autres forces, plus sinistres, se réveillèrent dans l’ombre. Des cultes voués aux créatures abyssales gagnèrent en puissance, et des rumeurs parlèrent d’anciens maux, emprisonnés sous la terre avant le Cataclysme, désormais libres. Les Nomades des Cendres murmuraient que le monde était entré dans une ère de dualité : l’espoir des survivants contre la noirceur tapie dans les failles. Cette tension donna naissance à une nouvelle ère, où les races d’Eldoria durent choisir entre s’unir pour un avenir meilleur ou céder à la destruction. Dans les tavernes et les ruines, une menace grandissante se faisait sentir, un défi que seuls les plus courageux – ou les plus fous – oseraient affronter.</p>
+        </div>
+    </section>
+    
+    <section id="factions">
+        <h2>Factions</h2>
+        <div class="faction-card">
+            <h3>1. Les Gardiens de la Lumière</h3>
+            <p><strong>But :</strong> Restaurer l’Empire de la Lumière et ramener le Culte à sa gloire passée.</p>
+            <p><strong>Croyances :</strong> Le Cataclysme est une épreuve divine visant à purifier les âmes. Seule la foi en la Lumière peut sauver Eldoria.</p>
+            <p><strong>Pratiques :</strong> Rituels sacrés, entraînement militaire rigoureux et croisades contre les hérétiques. Ils reconstruisent des temples et prêchent l’unité sous leur bannière.</p>
+            <p><strong>Structure :</strong> Une hiérarchie stricte dirigée par un Grand Prêtre, avec des chevaliers saints et des prêtres-guerriers formant l’élite, tandis que les fidèles servent comme base.</p>
+        </div>
+        <div class="faction-card">
+            <h3>2. Les Sombres Frères</h3>
+            <p><strong>But :</strong> Exploiter les secrets des failles pour obtenir un pouvoir absolu.</p>
+            <p><strong>Croyances :</strong> Les créatures abyssales sont des clés vers une vérité supérieure, et le Cataclysme est une porte ouverte sur une nouvelle ère de domination.</p>
+            <p><strong>Pratiques :</strong> Rituels occultes, pactes avec des entités des failles et études des magies interdites. Ils opèrent dans l’ombre, souvent masqués.</p>
+            <p><strong>Structure :</strong> Une confrérie secrète de mages et de renégats, sans chef unique, mais unie par la soif de pouvoir et de connaissance.</p>
+        </div>
+        <div class="faction-card">
+            <h3>3. Les Élus de l’Obscurité</h3>
+            <p><strong>But :</strong> Établir un ordre où seuls les forts prospèrent, en utilisant les failles comme armes.</p>
+            <p><strong>Croyances :</strong> La faiblesse a causé la chute de Gathwyn ; la survie exige la domination des puissants sur les faibles.</p>
+            <p><strong>Pratiques :</strong> Entraînement brutal, collecte d’artefacts sombres et manipulation politique pour écraser leurs rivaux.</p>
+            <p><strong>Structure :</strong> Une élite de guerriers et de stratèges issus de diverses races, dirigée par un conseil des plus impitoyables.</p>
+        </div>
+        <div class="faction-card">
+            <h3>4. La Légion des Survivants</h3>
+            <p><strong>But :</strong> Protéger les innocents et rebâtir une société viable pour tous.</p>
+            <p><strong>Croyances :</strong> L’unité et la compassion sont les seules voies vers la survie dans ce monde brisé.</p>
+            <p><strong>Pratiques :</strong> Construction de refuges, défense contre les créatures et création de routes sécurisées pour le commerce et les migrations.</p>
+            <p><strong>Structure :</strong> Une démocratie dirigée par des leaders élus, composée de soldats, artisans et citoyens unis par la solidarité.</p>
+        </div>
+        <div class="faction-card">
+            <h3>5. Les Explorateurs des Profondeurs</h3>
+            <p><strong>But :</strong> Découvrir les origines des failles et trouver des solutions pour guérir Eldoria.</p>
+            <p><strong>Croyances :</strong> La connaissance est la clé pour surmonter le Cataclysme ; les failles renferment des réponses autant que des dangers.</p>
+            <p><strong>Pratiques :</strong> Expéditions dans les failles, étude d’artefacts et affrontements avec les créatures pour collecter des données.</p>
+            <p><strong>Structure :</strong> Un réseau informel de savants, mages et aventuriers, partageant leurs découvertes lors de rares rassemblements.</p>
+        </div>
+        <div class="faction-card">
+            <h3>6. Les Éveillés du Vide</h3>
+            <p><strong>But :</strong> Comprendre les forces cosmiques derrière le Cataclysme et s’y connecter.</p>
+            <p><strong>Croyances :</strong> Les failles sont des fenêtres sur un Vide primordial, une réalité au-delà de la compréhension mortelle.</p>
+            <p><strong>Pratiques :</strong> Méditation près des failles, rituels mystiques et visions prophétiques pour communier avec le Vide.</p>
+            <p><strong>Structure :</strong> Cercles d’initiés dirigés par des mystiques, chacun interprétant le Vide à sa manière, parfois jusqu’à la folie.</p>
+        </div>
+        <div class="faction-card">
+            <h3>7. La Coalition des Peuples Libérés</h3>
+            <p><strong>But :</strong> Unir toutes les races dans une société égalitaire et libre.</p>
+            <p><strong>Croyances :</strong> Le Cataclysme a aboli les hiérarchies ; l’avenir appartient à l’égalité et à la coopération.</p>
+            <p><strong>Pratiques :</strong> Diplomatie, création de conseils multiraciaux et défense des opprimés contre les tyrans.</p>
+            <p><strong>Structure :</strong> Un conseil de représentants de chaque race, prenant des décisions par consensus, soutenu par une milice diverse.</p>
+        </div>
+        <div class="faction-card">
+            <h3>8. Les Chasseurs du Néant</h3>
+            <p><strong>But :</strong> Éradiquer toutes les créatures abyssales pour protéger Eldoria.</p>
+            <p><strong>Croyances :</strong> Les failles sont une malédiction, et leurs habitants une menace à exterminer sans pitié.</p>
+            <p><strong>Pratiques :</strong> Chasse méthodique, forge d’armes spécialisées et traque solitaire ou en petits groupes.</p>
+            <p><strong>Structure :</strong> Ordres militaires stricts, où chaque chasseur prête serment de dévotion à la cause, souvent jusqu’à la mort.</p>
+        </div>
+        <div class="faction-card">
+            <h3>9. Les Veilleurs de l’Ancienne Garde</h3>
+            <p><strong>But :</strong> Préserver les savoirs et artefacts de l’Empire de la Lumière pour un avenir meilleur.</p>
+            <p><strong>Croyances :</strong> L’héritage de Gathwyn contient les clés pour restaurer l’équilibre du monde.</p>
+            <p><strong>Pratiques :</strong> Garde de sites sacrés, récupération d’objets anciens et étude des textes oubliés.</p>
+            <p><strong>Structure :</strong> Une société secrète de gardiens, moines et érudits, liés par un serment de protection.</p>
+        </div>
+        <div class="faction-card">
+            <h3>10. Les Nomades des Cendres</h3>
+            <p><strong>But :</strong> Survivre librement dans les terres dévastées, loin des conflits.</p>
+            <p><strong>Croyances :</strong> Les civilisations fixes sont vouées à l’échec ; la liberté et l’adaptation sont la vraie force.</p>
+            <p><strong>Pratiques :</strong> Vie nomade, chasse, troc et évitement des grandes batailles, guidés par une sagesse pratique.</p>
+            <p><strong>Structure :</strong> Tribus fluides dirigées par des “Chamanes du Vent”, chefs charismatiques et spirituels.</p>
+        </div>
+    </section>
+    <section id="races">
+        <h2>Races</h2>
+        <div class="race-card">
+            <h3>1. Les Humains</h3>
+            <p><strong>Bonus :</strong> <span class="bonus">+1 Res +2 Int +1 Ment -2 Char (Bonus épée à une main)</span></p>
+            <p><strong>Caractéristiques :</strong> Résilients et adaptables, les humains sont une race nombreuse qui a connu une grande perte depuis le cataclysme, mais qui se bat pour survivre et reconstruire. Ils sont connus pour leur capacité à s'unir et à s'adapter à de nouvelles situations.</p>
+            <p><strong>Rôle dans les Factions :</strong> Les humains sont présents dans presque toutes les factions, que ce soit dans les Gardiens de la Lumière, la Coalition des Peuples Libérés ou les Veilleurs de l'Ancienne Garde. Leur diversité en fait des alliés et des rivaux précieux dans ce monde brisé.</p>
+            <img src="photo_races/humain.png" alt="Humains" style="width: 100%; max-width: 300px; height: auto; border-radius: 5px; margin-top: 15px; display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        
+        <div class="race-card">
+            <h3>2. Les Elfes</h3>
+            <p><strong>Bonus :</strong> <span class="bonus">+3 Dex +1 Mag -2 Res -1 Ment (Bonus arc)</span></p>
+            <p><strong>Caractéristiques :</strong> Élégants et agiles, les elfes sylvains possèdent une profonde connexion avec la nature. Ils ont survécu à l'effondrement de nombreuses civilisations en se retirant dans leurs forêts mystérieuses. Ils sont des experts dans le maniement de l'arc et ont des bases en magie.</p>
+            <p><strong>Rôle dans les Factions :</strong> Les elfes sylvains se retrouvent souvent dans la faction des Explorateurs des Profondeurs et les Veilleurs de l'Ancienne Garde, cherchant à préserver la connaissance de leur civilisation. Ils sont également présents dans la Coalition des Peuples Libérés, prônant la paix et l'unité.</p>
+            <img src="photo_races/elfe.png" alt="Elfes" style="width: 100%; max-width: 300px; height: auto; border-radius: 5px; margin-top: 15px; display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        
+        <div class="race-card">
+            <h3>3. Les Nains des Profondeurs</h3>
+            <p><strong>Bonus :</strong> <span class="bonus">+3 For +2 Res -2 Char -1 Mag (Bonus masse, marteau à une main)</span></p>
+            <p><strong>Caractéristiques :</strong> Résistants et robustes, les nains des profondeurs sont des maîtres artisans et des guerriers redoutables. Depuis le cataclysme, ils ont souvent été contraints de vivre sous terre, dans des cités protégées ou dans des zones reculées des montagnes.</p>
+            <p><strong>Rôle dans les Factions :</strong> Les nains font partie de la Coalition des Peuples Libérés, où ils défendent la reconstruction de la civilisation. Ils sont également présents dans les Chasseurs du Néant, en raison de leur expertise en matière de technologie et de guerre souterraine contre les créatures abyssales.</p>
+            <img src="photo_races/nain.png" alt="Nains des Profondeurs" style="width: 100%; max-width: 300px; height: auto; border-radius: 5px; margin-top: 15px; display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        
+        <div class="race-card">
+            <h3>4. Les Khorlaks (créatures abyssales)</h3>
+            <p><strong>Bonus :</strong> <span class="bonus">+2 Char +1 Mag -2 Res -1 For (Bonus dague)</span></p>
+            <p><strong>Caractéristiques :</strong> Les Khorlaks sont une race abyssale née des failles. Ce sont des créatures à la fois humanoïdes, dotées de tentacules et de griffes, vivant dans les ténèbres. Ils sont les ennemis jurés des peuples d'Eldoria et sont vus comme des menaces terrifiantes. Ils sont spécialisés dans la magie noire.</p>
+            <p><strong>Rôle dans les Factions :</strong> Bien qu'ils soient des ennemis naturels, certains Khorlaks se sont infiltrés dans les factions comme les Sombres Frères ou même les Éveillés du Vide, cherchant à exploiter leur nature abyssale pour des fins mystérieuses.</p>
+            <img src="photo_races/khorlak.png" alt="Khorlaks" style="width: 100%; max-width: 300px; height: auto; border-radius: 5px; margin-top: 15px; display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        
+        <div class="race-card">
+            <h3>5. Les Draïdiens</h3>
+            <p><strong>Bonus :</strong> <span class="bonus">+2 Res +3 Mag +1 Int -4 Ment -1 Dex (Bonus hache à une main)</span></p>
+            <p><strong>Caractéristiques :</strong> Les Draïdiens sont une race ancienne et semi-divine, proches des forces élémentaires de la terre et du ciel. Ils sont grands, avec une peau de pierre et des cheveux comme des racines d'arbres. Ils ont le pouvoir de manipuler la terre et la nature.</p>
+            <p><strong>Rôle dans les Factions :</strong> Ils sont liés aux Veilleurs de l'Ancienne Garde et aux Explorateurs des Profondeurs, cherchant à préserver l'héritage ancien et à comprendre la nature des failles. Leur sagesse ancestrale les place aussi dans la Coalition des Peuples Libérés.</p>
+            <img src="photo_races/draidiens.png" alt="Draïdiens" style="width: 100%; max-width: 300px; height: auto; border-radius: 5px; margin-top: 15px; display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        
+        <div class="race-card">
+            <h3>6. Les Draegars (Voleurs d'âme)</h3>
+            <p><strong>Bonus :</strong> <span class="bonus">+5 Mag +1 Int -3 Dex -3 For (Bonus bâtons magiques)</span></p>
+            <p><strong>Caractéristiques :</strong> Les Draegars sont des créatures spectrales qui peuvent prendre une apparence à peu près humaine (1 tour de canalisation pour se mettre en forme spectrale), des âmes errantes d'êtres défunts qui se sont retrouvées piégées entre le monde des vivants et des morts à cause du cataclysme. Ils possèdent des pouvoirs de nécromancie et peuvent posséder d'autres êtres.</p>
+            <p><strong>Rôle dans les Factions :</strong> Certains Draegars se sont unis sous la bannière des Sombres Frères, cherchant à exploiter leur capacité à manipuler la mort. D'autres, plus bienveillants, cherchent à réparer les torts causés par le cataclysme en travaillant avec la Légion des Survivants ou les Éveillés du Vide.</p>
+            <img src="photo_races/draegars.png" alt="Draegars" style="width: 100%; max-width: 300px; height: auto; border-radius: 5px; margin-top: 15px; display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        
+        <div class="race-card">
+            <h3>7. Les Ykharas</h3>
+            <p><strong>Bonus :</strong> <span class="bonus">+4 Dex +1 For -2 Ment -2 Mag (Bonus dague, hache à une main, marteau à une main)</span></p>
+            <p><strong>Caractéristiques :</strong> Une race de créatures félines, agiles et rusées, les Ykharas ont des griffes acérées et des sens aiguisés. Ils sont originaires des terres sauvages et ont survécu aux cataclysmes en s'adaptant à la vie en solitaire ou en petites tribus nomades.</p>
+            <p><strong>Rôle dans les Factions :</strong> Ils se retrouvent dans la faction des Nomades des Cendres et parfois dans la Coalition des Peuples Libérés, bien qu'ils restent souvent distants des grandes luttes de pouvoir, préférant se concentrer sur leur survie et leur indépendance.</p>
+            <img src="photo_races/ykharas.png" alt="Ykharas" style="width: 100%; max-width: 300px; height: auto; border-radius: 5px; margin-top: 15px; display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        
+        <div class="race-card">
+            <h3>8. Les Séraphins</h3>
+            <p><strong>Bonus :</strong> <span class="bonus">+6 Mag -2 For -2 Res -1 Ment (Bonus bâtons magiques)</span></p>
+            <p><strong>Caractéristiques :</strong> Une race d'êtres ailés, descendants des anciens anges ou esprits célestes, qui ont survécu à l'effondrement en se retirant dans des lieux sacrés. Les Séraphins sont des êtres majestueux, dotés de pouvoirs de lumière et de guérison.</p>
+            <p><strong>Rôle dans les Factions :</strong> Ils sont associés aux Gardiens de la Lumière, cherchant à restaurer l'ordre divin. Certains Séraphins se sont tournés vers la guérison des peuples dévastés, tandis que d'autres cherchent à reconstruire le pouvoir de l'Empire de la Lumière.</p>
+            <img src="photo_races/seraphin.png" alt="Séraphins" style="width: 100%; max-width: 300px; height: auto; border-radius: 5px; margin-top: 15px; display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        
+        <div class="race-card">
+            <h3>9. Les Skarjaks</h3>
+            <p><strong>Bonus :</strong> <span class="bonus">+2 For +3 Res +1 Char -1 Mag -1 Ment -1 Int -1 Dex (Bonus épée à une main et à deux mains)</span></p>
+            <p><strong>Caractéristiques :</strong> Les Skarjaks sont des créatures amphibies qui ont émergé des eaux englouties par le cataclysme. Dotés de nageoires et de peaux écailleuses, ils sont capables de respirer sous l'eau et sur terre. Leur société est tribale et leur technologie repose sur des savoirs anciens liés à l'eau et aux océans.</p>
+            <p><strong>Rôle dans les Factions :</strong> Ils sont associés à la faction des Explorateurs des Profondeurs et sont souvent vus comme des alliés précieux pour ceux qui cherchent à explorer les failles sous-marines. Ils sont également parfois associés aux Chasseurs du Néant, car ils luttent contre les créatures des abysses.</p>
+            <img src="photo_races/skarjaks.png" alt="Skarjaks" style="width: 100%; max-width: 300px; height: auto; border-radius: 5px; margin-top: 15px; display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        
+        <div class="race-card">
+            <h3>10. Les Férymants</h3>
+            <p><strong>Bonus :</strong> <span class="bonus">+5 Mag +3 Char -4 Int -2 Dex (Bonus épée à une main et marteau à une main)</span></p>
+            <p><strong>Caractéristiques :</strong> Les Férymants sont des êtres élémentaires liés au feu et à la chaleur. Leur corps ressemble à des créatures de lave et de cendres en fusion. Ils ont la capacité de manipuler les flammes et la chaleur à volonté.</p>
+            <p><strong>Rôle dans les Factions :</strong> Les Férymants sont présents dans la faction des Chasseurs du Néant, leur pouvoir de feu étant utile contre les créatures abyssales. Certains se retrouvent aussi parmi les Élus de l'Obscurité, utilisant leur pouvoir destructeur pour remodeler le monde à leur image.</p>
+            <img src="photo_races/fremyants.png" alt="Férymants" style="width: 100%; max-width: 300px; height: auto; border-radius: 5px; margin-top: 15px; display: block; margin-left: auto; margin-right: auto;">
+        </div>
+    </section>
+    
+    <section id="game-mechanics">
+        <h2>Mécaniques de jeu</h2>
+        <p>Chaque race peut aller dans la faction qu'elle veut. Vous pouvez faire absolument ce que vous voulez, je vous impose juste de choisir une race parmi les 10 disponibles ainsi qu’une faction, sauf si vous voulez créer un personnage “neutre”.</p>
+        <p>Si vous tombez à 0 point de vie, l'aventure ne se termine pas, soit vous êtes soigné via une interaction quelconque à la fin de la scène (aucune garantie de ressusciter). Soit vous ferez des jets de dés jusqu'à ce que la valeur demandée soit bonne, chaque jet de dés raté affecte votre personnage aux niveaux de ses points de vie et ses statistiques (2 jets ratés = légère perte de stats), jusqu'à ce qu'une mort définitive s’en suive.</p>
+        <p>Pour finir, chaque race aura un bonus dans leurs domaines de prédilections, et un malus de points dans la caractéristique où ils sont le plus faible. (bonus et malus plus ou moins grand, propre à chaque race). Le racisme via certaines races sera aussi présent. Vous pouvez débuter l’aventure avec l’arme où vous avez un bonus propre à votre classe ou celle que vous voulez (Vous ne pouvez choisir qu’une seule arme).</p>
+        <p>Vous pouvez évidemment jouer un personnage qui n’a rien à voir avec son affinité. (Ex un Séraphins qui devient un chevalier qui va aller se taper au corps à corps). Mais vous en subirez les conséquences. Vous pouvez apprendre des sorts peu importe votre race.</p>
+        <p>Un système d’xp et de niveaux sera présent. Prendre un niveau = boost de 1 point dans une statistique + Possibilité d’apprendre une capacité. Peu importe ce que c’est tant que cela est raccord avec votre personnage. (Dash, combo, boost de stats temporaire, enchantement etc).</p>
+        <h3>Points de compétence</h3>
+        <table>
+            <tr><th>Stat</th><th>Max</th><th>Description</th></tr>
+            <tr>
+                <td>Force (For)</td>
+                <td>20</td>
+                <td>Puissance physique, dégâts au corps à corps, capacité à soulever/porter, briser des objets, lutter.</td>
+            </tr>
+            <tr>
+                <td>Résistance (Res)</td>
+                <td>20</td>
+                <td>Endurance, santé générale, résistance aux blessures, maladies, poisons, fatigue et efforts prolongés.</td>
+            </tr>
+            <tr>
+                <td>Dextérité (Dex)</td>
+                <td>20</td>
+                <td>Agilité, acrobatie, escalade, discrétion, esquive, jets de perception, précision, maniement des armes à distance.</td>
+            </tr>
+            <tr>
+                <td>Intelligence (Int)</td>
+                <td>20</td>
+                <td>Logique, connaissances, résolution d'énigmes, mémoire, analyse, compréhension des langues et des systèmes magiques.</td>
+            </tr>
+            <tr>
+                <td>Magie (Mag)</td>
+                <td>20</td>
+                <td>Aptitude à lancer des sorts, puissance magique, contrôle des énergies surnaturelles, résistance aux effets magiques.</td>
+            </tr>
+            <tr>
+                <td>Charisme (Char)</td>
+                <td>20</td>
+                <td>Influence sociale, persuasion, intimidation, négociation, capacité à inspirer ou manipuler autrui.</td>
+            </tr>
+            <tr>
+                <td>Mentale (Ment)</td>
+                <td>20</td>
+                <td>Volonté, résistance mentale (peur, sommeil, faim, douleur), gestion du stress, ténacité face aux épreuves et aux effets psychiques.</td>
+            </tr>
+        </table>
+        <p>Vous avez 75 points de statistiques à investir où vous voulez.</p>
+        <p>Vos points de vie et de mana seront décidés via un jet de dés une fois votre première apparition dans le jdr. N’ayez pas peur si vous ratez vos jets de dés, une limite est fixée. (Vous ne pouvez pas avoir 3 points de vie et 1 de mana)</p>
+        <p>Vous êtes libre de faire le lore que vous voulez tant que celui-ci est raccord avec celui d’Eldoria. À la fin de votre histoire vous devrez vous retrouvez dans une taverne à Eldoria, vous aurez entendu parler d’une menace qui inquiète la capitale. Votre objectif sera d’éliminer celle-ci ou pas…</p>
+        <p>
+    Une fois avoir pris connaissance du lore, des factions, des races et avoir mis vos points de stats en prenant en compte vos races, merci d’aller voir Lexannor (le MJ et accessoirement moi-même) afin de lui en faire part. Merci.
+</p>
+<p>
+    Pour créer votre personnage, utilisez la <a href="fiche_perso.html">fiche de personnage Eldoria</a>.
+</p>
+    </section>
+</body>
+</html>
